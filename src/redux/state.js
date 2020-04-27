@@ -9,7 +9,7 @@ let store = {
         { message: "im vasia", counter: "6" },
         { message: "im ivan", counter: "7" },
       ],
-      newPostText: "petyh",
+      newPostText: "Enter text here",
     },
     dialogsPage: {
       dialogs: [
