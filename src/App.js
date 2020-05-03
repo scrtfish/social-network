@@ -8,6 +8,7 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import { Route } from "react-router-dom";
 // import Header from "./Header.js";
 // import Technologies from "./Technologies.js";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
   return (
@@ -17,16 +18,11 @@ const App = (props) => {
       <Navbar />
 
       <div className="app-wrapper-content">
-        <Route path="/dialogs" render={() => <Dialogs store={props.store} />} />
         <Route
-          path="/profile"
-          render={() => (
-            <Profile
-              profilePage={props.state.profilePage}
-              dispatch={props.dispatch}
-            />
-          )}
+          path="/dialogs"
+          render={() => <DialogsContainer store={props.store} />}
         />
+        <Route path="/profile" render={() => <Profile store={props.store} />} />
         {/* <Route path="/news" component={News} />
           <Route path="/music" component={Music} />
           <Route path="/settings" component={Settings} /> */}
